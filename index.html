@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="fr" data-base="/luminoir-v1/"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Luminoir — Maison de design, univers de la nuit</title><meta name="description" content="Luminoir, maison de design pour l'univers de la nuit. Objets de service sur mesure : présentoirs lumineux, enseignes, costumes LED, effets et objets de marque pour clubs, bars et événements."><link rel="canonical" href="https://louisdreyfuspro-ctrl.github.io/luminoir-v1/"><meta property="og:type" content="website"><meta property="og:site_name" content="Luminoir"><meta property="og:title" content="Luminoir — Maison de design, univers de la nuit"><meta property="og:description" content="Luminoir, maison de design pour l'univers de la nuit. Objets de service sur mesure : présentoirs lumineux, enseignes, costumes LED, effets et objets de marque pour clubs, bars et événements."><meta property="og:url" content="https://louisdreyfuspro-ctrl.github.io/luminoir-v1/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#08080a"><meta name="robots" content="noindex, nofollow"><!-- Marqué avant tout rendu : conditionne les animations d'apparition.
+       Le splash est neutralisé ici, avant peinture, pour qu'il ne clignote pas
+       lors des navigations suivantes de la même session. --><script>
+    document.documentElement.classList.add('js');
+    try {
+      // Les deux versions du site partagent le même domaine sur GitHub Pages :
+      // sans le préfixe dans la clé, voir la v1 supprimerait le splash de la v2.
+      if (sessionStorage.getItem('luminoir:splash:' + document.documentElement.dataset.base)) {
+        document.documentElement.classList.add('sans-splash');
+      }
+    } catch {}
+  </script><link rel="icon" href="/luminoir-v1/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/luminoir-v1/marque/icone-180.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Inter:wght@200;300;400&display=swap"><link rel="stylesheet" href="/luminoir-v1/_astro/approche.DEfuFd8R.css">
+<style>.carte[data-astro-cid-pyx7yk5b]{display:block}.carte__cadre[data-astro-cid-pyx7yk5b]{position:relative;overflow:hidden;background:var(--noir-2);aspect-ratio:3 / 4;border:1px solid var(--ligne)}.carte__img[data-astro-cid-pyx7yk5b]{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.22,1,.36,1),filter var(--t);filter:brightness(.8) saturate(.9)}.carte[data-astro-cid-pyx7yk5b]:hover .carte__img[data-astro-cid-pyx7yk5b]{transform:scale(1.045);filter:brightness(1.12) saturate(1.1)}.carte__cadre[data-astro-cid-pyx7yk5b]:after{content:"";position:absolute;inset:0;background:radial-gradient(120% 85% at 50% 100%,var(--halo-dim),transparent 66%);opacity:0;transition:opacity var(--t);pointer-events:none}.carte[data-astro-cid-pyx7yk5b]:hover .carte__cadre[data-astro-cid-pyx7yk5b]:after{opacity:1}.carte__cadre[data-astro-cid-pyx7yk5b]{transition:border-color var(--t),box-shadow var(--t)}.carte[data-astro-cid-pyx7yk5b]:hover .carte__cadre[data-astro-cid-pyx7yk5b]{border-color:#fff6;box-shadow:var(--lueur-douce)}.carte__vide[data-astro-cid-pyx7yk5b]{position:absolute;inset:0;display:grid;place-items:center;background:repeating-linear-gradient(45deg,var(--noir-2) 0 10px,var(--noir-3) 10px 20px)}.carte__pied[data-astro-cid-pyx7yk5b]{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding-top:.85rem}.carte__nom[data-astro-cid-pyx7yk5b]{font-family:var(--sans);font-size:.95rem;font-weight:400;letter-spacing:-.015em;margin:0;transition:color var(--t)}.carte[data-astro-cid-pyx7yk5b]:hover .carte__nom[data-astro-cid-pyx7yk5b]{color:var(--halo);text-shadow:var(--lueur-texte)}.carte__pied[data-astro-cid-pyx7yk5b] .label[data-astro-cid-pyx7yk5b]{flex:none}@media(max-width:620px){.carte__pied[data-astro-cid-pyx7yk5b]{flex-direction:column;align-items:flex-start;gap:.15rem}.carte__nom[data-astro-cid-pyx7yk5b]{font-size:.85rem}.carte__pied[data-astro-cid-pyx7yk5b] .label[data-astro-cid-pyx7yk5b]{font-size:.56rem;letter-spacing:.14em}}
+</style>
+<link rel="stylesheet" href="/luminoir-v1/_astro/index.Cqx255cn.css"></head> <body class> <div class="splash" data-splash aria-hidden="true" data-astro-cid-mlbag6b5> <div class="splash__int" data-astro-cid-mlbag6b5> <img src="/luminoir-v1/marque/luminoir-verrou.png" alt="Luminoir — Made to be seen" width="1144" height="244" class="splash__mot" data-astro-cid-mlbag6b5> <div class="splash__rail" data-astro-cid-mlbag6b5><span class="splash__jauge" data-astro-cid-mlbag6b5></span></div> </div> </div>  <script>
+  (() => {
+    const el = document.querySelector('[data-splash]');
+    if (!el || document.documentElement.classList.contains('sans-splash')) return;
+
+    document.body.style.overflow = 'hidden';
+
+    const partir = () => {
+      el.classList.add('est-parti');
+      document.body.style.overflow = '';
+      try {
+        sessionStorage.setItem('luminoir:splash:' + document.documentElement.dataset.base, '1');
+      } catch {}
+      // Retiré du DOM une fois la transition finie : plus rien ne se superpose.
+      setTimeout(() => el.remove(), 1000);
+    };
+
+    const reduit = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Assez long pour lire la marque, assez court pour ne pas retenir le visiteur.
+    setTimeout(partir, reduit ? 350 : 1550);
+    // Filet de sécurité si un timer est gelé (onglet en arrière-plan).
+    window.addEventListener('load', () => setTimeout(partir, reduit ? 350 : 1550));
+  })();
+</script> <a href="#contenu" class="saut-nav">Aller au contenu</a> <header class="tete" data-tete data-astro-cid-3ef6ksr2> <div class="tete__int" data-astro-cid-3ef6ksr2> <a href="/luminoir-v1/" class="tete__mark" aria-label="Luminoir — accueil" data-astro-cid-3ef6ksr2> <img src="/luminoir-v1/marque/luminoir-mot.png" alt="Luminoir" width="1144" height="217" data-astro-cid-3ef6ksr2> </a> <nav class="tete__nav" aria-label="Navigation principale" data-astro-cid-3ef6ksr2> <a href="/luminoir-v1/catalogue" class="lien" data-astro-cid-3ef6ksr2>Catalogue</a> <a href="/luminoir-v1/approche" class="lien" data-astro-cid-3ef6ksr2>Approche</a> <a href="/luminoir-v1/devis" class="lien" data-astro-cid-3ef6ksr2>
+Devis<sup data-compteur hidden class="pastille" data-astro-cid-3ef6ksr2></sup> </a> </nav> <button class="tete__bascule" data-menu aria-expanded="false" aria-controls="menu-mobile" data-astro-cid-3ef6ksr2> <span class="label" data-astro-cid-3ef6ksr2>Menu</span> <span class="tete__barres" aria-hidden="true" data-astro-cid-3ef6ksr2><i data-astro-cid-3ef6ksr2></i><i data-astro-cid-3ef6ksr2></i></span> </button> </div> </header> <div class="voile" id="menu-mobile" data-voile hidden data-astro-cid-3ef6ksr2> <nav class="voile__nav" aria-label="Navigation mobile" data-astro-cid-3ef6ksr2> <a href="/luminoir-v1/catalogue" class="titre h-m" data-astro-cid-3ef6ksr2>Catalogue</a> <div class="voile__cats" data-astro-cid-3ef6ksr2> <a href="/luminoir-v1/catalogue/arrivee-bouteille" class="voile__cat" data-astro-cid-3ef6ksr2> Arrivée bouteille<span class="label" data-astro-cid-3ef6ksr2>10</span> </a><a href="/luminoir-v1/catalogue/wear" class="voile__cat" data-astro-cid-3ef6ksr2> Wear<span class="label" data-astro-cid-3ef6ksr2>12</span> </a><a href="/luminoir-v1/catalogue/masques" class="voile__cat" data-astro-cid-3ef6ksr2> Masques<span class="label" data-astro-cid-3ef6ksr2>15</span> </a><a href="/luminoir-v1/catalogue/effets-fx" class="voile__cat" data-astro-cid-3ef6ksr2> Effets FX<span class="label" data-astro-cid-3ef6ksr2>07</span> </a><a href="/luminoir-v1/catalogue/branding" class="voile__cat" data-astro-cid-3ef6ksr2> Branding<span class="label" data-astro-cid-3ef6ksr2>05</span> </a> </div> <a href="/luminoir-v1/approche" class="titre h-m" data-astro-cid-3ef6ksr2>Approche</a> <a href="/luminoir-v1/devis" class="titre h-m" data-astro-cid-3ef6ksr2>Devis <sup data-compteur hidden class="pastille" data-astro-cid-3ef6ksr2></sup></a> </nav> </div>  <script>
+  /* En-tête : fond au défilement, masquage vers le bas, menu plein écran. */
+  (() => {
+    const tete = document.querySelector('[data-tete]');
+    const bascule = document.querySelector('[data-menu]');
+    const voile = document.querySelector('[data-voile]');
+    if (!tete) return;
+
+    let dernier = 0;
+    const auDefilement = () => {
+      const y = window.scrollY;
+      tete.classList.toggle('est-pose', y > 24);
+      // On ne masque pas tant que le menu est ouvert.
+      const ouvert = bascule?.getAttribute('aria-expanded') === 'true';
+      tete.classList.toggle('est-cachee', !ouvert && y > 320 && y > dernier);
+      dernier = y;
+    };
+    window.addEventListener('scroll', auDefilement, { passive: true });
+    auDefilement();
+
+    if (!bascule || !voile) return;
+
+    const fermer = () => {
+      bascule.setAttribute('aria-expanded', 'false');
+      bascule.classList.remove('est-ouvert');
+      voile.classList.remove('est-visible');
+      document.body.style.overflow = '';
+      setTimeout(() => voile.setAttribute('hidden', ''), 520);
+    };
+    const ouvrir = () => {
+      voile.removeAttribute('hidden');
+      // Reflow synchrone plutôt que requestAnimationFrame : rAF est bridé en
+      // onglet d'arrière-plan, le menu s'ouvrirait alors sans jamais apparaître.
+      void voile.offsetHeight;
+      voile.classList.add('est-visible');
+      bascule.setAttribute('aria-expanded', 'true');
+      bascule.classList.add('est-ouvert');
+      document.body.style.overflow = 'hidden';
+    };
+
+    bascule.addEventListener('click', () =>
+      bascule.getAttribute('aria-expanded') === 'true' ? fermer() : ouvrir());
+    voile.addEventListener('click', (e) => { if (e.target.closest('a')) fermer(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && bascule.getAttribute('aria-expanded') === 'true') fermer();
+    });
+  })();
+</script> <main id="contenu">  <section class="heros" data-astro-cid-j7pv25f6> <div class="heros__haut enveloppe" data-astro-cid-j7pv25f6> <p class="label" data-astro-cid-j7pv25f6>Scénographie lumineuse</p> <p class="label" data-astro-cid-j7pv25f6>49 pièces au catalogue</p> </div> <div class="heros__centre" data-astro-cid-j7pv25f6> <h1 class="titre h-xl heros__mot" data-astro-cid-j7pv25f6>luminoir</h1> <p class="heros__ligne" data-astro-cid-j7pv25f6>
+Tout le matériel lumineux<br data-astro-cid-j7pv25f6>
+qui fait basculer une soirée.
+</p> </div> <div class="heros__bandeau" aria-hidden="true" data-astro-cid-j7pv25f6> <div class="ruban" data-astro-cid-j7pv25f6> <img src="/luminoir-v1/img/avion-6-bouteilles-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/f1-grandeur-nature-en-resine-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/jet-led-avec-plateau-bouteilles-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/sabre-lumineux-a-main-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/ailes-lumineuses-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/armure-led-rouge-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/bracelet-maracas-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/costume-astronaute-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/casque-antique-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/casque-nvg-gign-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/chapeau-cowboy-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/chapeau-lumineux-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/boule-de-feu-flottante-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/machine-a-bulles-bazooka-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/avion-6-bouteilles-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/f1-grandeur-nature-en-resine-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/jet-led-avec-plateau-bouteilles-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/sabre-lumineux-a-main-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/ailes-lumineuses-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/armure-led-rouge-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/bracelet-maracas-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/costume-astronaute-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/casque-antique-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/casque-nvg-gign-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/chapeau-cowboy-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/chapeau-lumineux-led-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/boule-de-feu-flottante-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6><img src="/luminoir-v1/img/machine-a-bulles-bazooka-400.webp" alt="" width="400" height="536" loading="lazy" decoding="async" class="ruban__img" data-astro-cid-j7pv25f6> </div> </div> <a href="#manifeste" class="heros__cue label" data-astro-cid-j7pv25f6>Découvrir ↓</a> </section>  <section class="section enveloppe" id="manifeste" data-astro-cid-j7pv25f6> <p class="label reveal" data-astro-cid-j7pv25f6>01 — La maison</p> <p class="titre h-l manifeste reveal" data-delai="80" data-astro-cid-j7pv25f6>
+Une arrivée de bouteille dure vingt secondes.
+<span class="mat" data-astro-cid-j7pv25f6>Nous réunissons les pièces qui font qu'on s'en souvienne le lendemain.</span> </p> <div class="triptyque" data-astro-cid-j7pv25f6> <div class="reveal" data-delai="0" data-astro-cid-j7pv25f6> <p class="label" data-astro-cid-j7pv25f6>Personnalisé</p> <p class="plomb" data-astro-cid-j7pv25f6>
+Couleurs, logo et finitions de votre établissement sur chaque pièce.
+          Rien n'est livré en série.
+</p> </div> <div class="reveal" data-delai="90" data-astro-cid-j7pv25f6> <p class="label" data-astro-cid-j7pv25f6>Pensé pour le service</p> <p class="plomb" data-astro-cid-j7pv25f6>
+Du matériel porté, déplacé et rallumé nuit après nuit,
+          pas prévu pour une seule soirée.
+</p> </div> <div class="reveal" data-delai="180" data-astro-cid-j7pv25f6> <p class="label" data-astro-cid-j7pv25f6>De 15 jours à 8 semaines</p> <p class="plomb" data-astro-cid-j7pv25f6>
+Le délai dépend de la pièce et de la personnalisation.
+          Il est annoncé au devis, jamais après.
+</p> </div> </div> </section>  <section class="section" data-cats data-astro-cid-j7pv25f6> <div class="enveloppe" data-astro-cid-j7pv25f6> <p class="label reveal" data-astro-cid-j7pv25f6>02 — Le catalogue</p> </div> <div class="cats enveloppe" data-astro-cid-j7pv25f6> <a href="/luminoir-v1/catalogue/arrivee-bouteille" class="cat reveal" data-delai="0" data-apercu="avion-6-bouteilles" data-apercu-nom="Avion 6 bouteilles" data-astro-cid-j7pv25f6> <span class="cat__num label" data-astro-cid-j7pv25f6>01</span> <span class="titre h-m cat__nom" data-astro-cid-j7pv25f6>Arrivée bouteille</span> <span class="cat__ligne" data-astro-cid-j7pv25f6>Le moment où la salle se retourne.</span> <span class="cat__nb label" data-astro-cid-j7pv25f6>10 pièces</span> </a><a href="/luminoir-v1/catalogue/wear" class="cat reveal" data-delai="70" data-apercu="ailes-lumineuses" data-apercu-nom="Ailes lumineuses" data-astro-cid-j7pv25f6> <span class="cat__num label" data-astro-cid-j7pv25f6>02</span> <span class="titre h-m cat__nom" data-astro-cid-j7pv25f6>Wear</span> <span class="cat__ligne" data-astro-cid-j7pv25f6>Le staff devient le décor.</span> <span class="cat__nb label" data-astro-cid-j7pv25f6>12 pièces</span> </a><a href="/luminoir-v1/catalogue/masques" class="cat reveal" data-delai="140" data-apercu="casque-antique-led" data-apercu-nom="Casque antique LED" data-astro-cid-j7pv25f6> <span class="cat__num label" data-astro-cid-j7pv25f6>03</span> <span class="titre h-m cat__nom" data-astro-cid-j7pv25f6>Masques</span> <span class="cat__ligne" data-astro-cid-j7pv25f6>Un visage, une identité, une nuit.</span> <span class="cat__nb label" data-astro-cid-j7pv25f6>15 pièces</span> </a><a href="/luminoir-v1/catalogue/effets-fx" class="cat reveal" data-delai="210" data-apercu="boule-de-feu-flottante" data-apercu-nom="Boule de feu flottante" data-astro-cid-j7pv25f6> <span class="cat__num label" data-astro-cid-j7pv25f6>04</span> <span class="titre h-m cat__nom" data-astro-cid-j7pv25f6>Effets FX</span> <span class="cat__ligne" data-astro-cid-j7pv25f6>Fumée, étincelles, bulles : l&#39;air prend forme.</span> <span class="cat__nb label" data-astro-cid-j7pv25f6>7 pièces</span> </a><a href="/luminoir-v1/catalogue/branding" class="cat reveal" data-delai="280" data-apercu="lettre-enseigne-lumineuse-personnalisable" data-apercu-nom="Lettre / enseigne lumineuse personnalisable" data-astro-cid-j7pv25f6> <span class="cat__num label" data-astro-cid-j7pv25f6>05</span> <span class="titre h-m cat__nom" data-astro-cid-j7pv25f6>Branding</span> <span class="cat__ligne" data-astro-cid-j7pv25f6>Votre marque, allumée.</span> <span class="cat__nb label" data-astro-cid-j7pv25f6>5 pièces</span> </a> </div> <!-- Aperçu qui suit le curseur (desktop uniquement). Décoratif : la même
+         information est accessible par le lien, d'où aria-hidden. --> <div class="curseur-img" data-curseur aria-hidden="true" data-astro-cid-j7pv25f6> <img alt="" data-curseur-img data-astro-cid-j7pv25f6> <span class="curseur-img__nom label" data-curseur-legende data-astro-cid-j7pv25f6></span> </div> </section>  <section class="section enveloppe" data-astro-cid-j7pv25f6> <div class="entete-sec" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="label reveal" data-astro-cid-j7pv25f6>03 — Sélection</p> <h2 class="titre h-l reveal" data-delai="60" data-astro-cid-j7pv25f6>Pièces signatures</h2> </div> <a href="/luminoir-v1/catalogue" class="bouton reveal" data-delai="120" data-astro-cid-j7pv25f6>Voir les 49 pièces</a> </div> <div class="grille" data-astro-cid-j7pv25f6> <a href="/luminoir-v1/produit/jet-led-avec-plateau-bouteilles" class="carte reveal" data-delai="0" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/jet-led-avec-plateau-bouteilles-800.webp" srcset="/luminoir-v1/img/jet-led-avec-plateau-bouteilles-400.webp 400w, /luminoir-v1/img/jet-led-avec-plateau-bouteilles-800.webp 800w, /luminoir-v1/img/jet-led-avec-plateau-bouteilles-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du jet led avec plateau bouteilles, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Jet LED avec plateau bouteilles</h3> <span class="label" data-astro-cid-pyx7yk5b>Arrivée bouteille</span> </div> </a> <a href="/luminoir-v1/produit/costume-astronaute-led" class="carte reveal" data-delai="80" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/costume-astronaute-led-800.webp" srcset="/luminoir-v1/img/costume-astronaute-led-400.webp 400w, /luminoir-v1/img/costume-astronaute-led-800.webp 800w, /luminoir-v1/img/costume-astronaute-led-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du costume astronaute led, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Costume astronaute LED</h3> <span class="label" data-astro-cid-pyx7yk5b>Wear</span> </div> </a> <a href="/luminoir-v1/produit/doudoune-led-fibre-optique" class="carte reveal" data-delai="160" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/doudoune-led-fibre-optique-800.webp" srcset="/luminoir-v1/img/doudoune-led-fibre-optique-400.webp 400w, /luminoir-v1/img/doudoune-led-fibre-optique-800.webp 800w, /luminoir-v1/img/doudoune-led-fibre-optique-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du doudoune led fibre optique, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Doudoune LED fibre optique</h3> <span class="label" data-astro-cid-pyx7yk5b>Wear</span> </div> </a> <a href="/luminoir-v1/produit/tete-animale-miroir" class="carte reveal" data-delai="240" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/tete-animale-miroir-800.webp" srcset="/luminoir-v1/img/tete-animale-miroir-400.webp 400w, /luminoir-v1/img/tete-animale-miroir-800.webp 800w, /luminoir-v1/img/tete-animale-miroir-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du tête animale miroir, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Tête animale miroir</h3> <span class="label" data-astro-cid-pyx7yk5b>Masques</span> </div> </a> <a href="/luminoir-v1/produit/petite-machine-a-fumee" class="carte reveal" data-delai="0" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/petite-machine-a-fumee-800.webp" srcset="/luminoir-v1/img/petite-machine-a-fumee-400.webp 400w, /luminoir-v1/img/petite-machine-a-fumee-800.webp 800w, /luminoir-v1/img/petite-machine-a-fumee-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du petite machine à fumée, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Petite machine à fumée</h3> <span class="label" data-astro-cid-pyx7yk5b>Effets FX</span> </div> </a> <a href="/luminoir-v1/produit/vetement-personnalisable-led" class="carte reveal" data-delai="80" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/vetement-personnalisable-led-800.webp" srcset="/luminoir-v1/img/vetement-personnalisable-led-400.webp 400w, /luminoir-v1/img/vetement-personnalisable-led-800.webp 800w, /luminoir-v1/img/vetement-personnalisable-led-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du vêtement personnalisable led, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Vêtement personnalisable LED</h3> <span class="label" data-astro-cid-pyx7yk5b>Branding</span> </div> </a> <a href="/luminoir-v1/produit/etiquette-de-bouteille-personnalisable" class="carte reveal" data-delai="160" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/etiquette-de-bouteille-personnalisable-800.webp" srcset="/luminoir-v1/img/etiquette-de-bouteille-personnalisable-400.webp 400w, /luminoir-v1/img/etiquette-de-bouteille-personnalisable-800.webp 800w, /luminoir-v1/img/etiquette-de-bouteille-personnalisable-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Vue du étiquette de bouteille personnalisable, produit scénographique Luminoir pour établissement festif." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Étiquette de bouteille personnalisable</h3> <span class="label" data-astro-cid-pyx7yk5b>Branding</span> </div> </a> <a href="/luminoir-v1/produit/avion-6-bouteilles" class="carte reveal" data-delai="240" data-astro-cid-pyx7yk5b> <div class="carte__cadre" data-astro-cid-pyx7yk5b> <img src="/luminoir-v1/img/avion-6-bouteilles-800.webp" srcset="/luminoir-v1/img/avion-6-bouteilles-400.webp 400w, /luminoir-v1/img/avion-6-bouteilles-800.webp 800w, /luminoir-v1/img/avion-6-bouteilles-1400.webp 1400w" sizes="(max-width: 620px) 50vw, (max-width: 1100px) 33vw, 25vw" alt="Présentoir lumineux en forme d’avion conçu pour transporter six bouteilles en club." width="800" height="1071" loading="lazy" decoding="async" class="carte__img" data-astro-cid-pyx7yk5b> </div> <div class="carte__pied" data-astro-cid-pyx7yk5b> <h3 class="carte__nom" data-astro-cid-pyx7yk5b>Avion 6 bouteilles</h3> <span class="label" data-astro-cid-pyx7yk5b>Arrivée bouteille</span> </div> </a>  </div> </section>  <section class="appel" data-astro-cid-j7pv25f6> <div class="enveloppe appel__int" data-astro-cid-j7pv25f6> <p class="label reveal" data-astro-cid-j7pv25f6>04 — Parlons-en</p> <p class="titre h-l reveal" data-delai="70" data-astro-cid-j7pv25f6>
+Dites-nous ce que vous voulez voir<br data-astro-cid-j7pv25f6>arriver en salle.
+</p> <p class="plomb reveal" data-delai="140" data-astro-cid-j7pv25f6>
+Constituez votre sélection, ajoutez vos contraintes,
+        et nous revenons vers vous avec une proposition chiffrée.
+</p> <div class="appel__actions reveal" data-delai="200" data-astro-cid-j7pv25f6> <a href="/luminoir-v1/catalogue" class="bouton bouton--plein" data-astro-cid-j7pv25f6>Parcourir le catalogue</a> <a href="/luminoir-v1/devis" class="bouton" data-astro-cid-j7pv25f6>Demander un devis</a> </div> </div> </section> </main> <footer class="pied" data-astro-cid-sz7xmlte> <hr class="filet" data-astro-cid-sz7xmlte> <div class="enveloppe pied__int" data-astro-cid-sz7xmlte> <div class="pied__marque" data-astro-cid-sz7xmlte> <img src="/luminoir-v1/marque/luminoir-verrou.png" alt="Luminoir — Made to be seen" width="1144" height="244" class="pied__mark" data-astro-cid-sz7xmlte> <p class="plomb pied__plomb" data-astro-cid-sz7xmlte>
+Maison de design pour l'univers de la nuit. Objets de service sur
+        mesure, dessinés pour un seul établissement — vos formes, vos couleurs,
+        votre logo.
+</p> <a href="/luminoir-v1/devis" class="bouton bouton--plein" data-astro-cid-sz7xmlte>Demander un devis</a> </div> <div class="pied__cols" data-astro-cid-sz7xmlte> <div class="pied__col" data-astro-cid-sz7xmlte> <p class="label" data-astro-cid-sz7xmlte>Catalogue</p> <a href="/luminoir-v1/catalogue/arrivee-bouteille" class="pied__lien" data-astro-cid-sz7xmlte>Arrivée bouteille</a><a href="/luminoir-v1/catalogue/wear" class="pied__lien" data-astro-cid-sz7xmlte>Wear</a><a href="/luminoir-v1/catalogue/masques" class="pied__lien" data-astro-cid-sz7xmlte>Masques</a><a href="/luminoir-v1/catalogue/effets-fx" class="pied__lien" data-astro-cid-sz7xmlte>Effets FX</a><a href="/luminoir-v1/catalogue/branding" class="pied__lien" data-astro-cid-sz7xmlte>Branding</a> </div> <div class="pied__col" data-astro-cid-sz7xmlte> <p class="label" data-astro-cid-sz7xmlte>Maison</p> <a href="/luminoir-v1/approche" class="pied__lien" data-astro-cid-sz7xmlte>Notre approche</a> <a href="/luminoir-v1/catalogue" class="pied__lien" data-astro-cid-sz7xmlte>Tout le catalogue</a> <a href="/luminoir-v1/devis" class="pied__lien" data-astro-cid-sz7xmlte>Devis &amp; contact</a> </div> <div class="pied__col" data-astro-cid-sz7xmlte> <p class="label" data-astro-cid-sz7xmlte>Contact</p> <a href="mailto:contact@luminoir.fr" class="pied__lien" data-astro-cid-sz7xmlte>contact@luminoir.fr</a> <span class="pied__lien pied__lien--mat" data-astro-cid-sz7xmlte>Production à la commande</span> <span class="pied__lien pied__lien--mat" data-astro-cid-sz7xmlte>Délais de 15 jours à 8 semaines</span> </div> </div> </div> <div class="enveloppe pied__bas" data-astro-cid-sz7xmlte> <p class="label" data-astro-cid-sz7xmlte>© 2026 Luminoir</p> <p class="label" data-astro-cid-sz7xmlte>Tous droits réservés</p> </div> </footer>  <script>
+    /* ---------- Sélection de produits (devis) ----------
+       Stockée en localStorage : pas de compte, pas de serveur.
+       Le compteur d'en-tête et les boutons produit s'y abonnent. */
+    (() => {
+      // Préfixée par le site : une sélection faite sur une version ne doit
+      // pas réapparaître sur l'autre, servie depuis le même domaine.
+      const CLE = 'luminoir:selection:' + document.documentElement.dataset.base;
+
+      const lire = () => {
+        try { return JSON.parse(localStorage.getItem(CLE)) || []; }
+        catch { return []; }
+      };
+      const ecrire = (liste) => {
+        try { localStorage.setItem(CLE, JSON.stringify(liste)); } catch {}
+        document.dispatchEvent(new CustomEvent('selection:maj', { detail: liste }));
+      };
+
+      window.Selection = {
+        lire,
+        contient: (slug) => lire().some((p) => p.slug === slug),
+        basculer(produit) {
+          const liste = lire();
+          const i = liste.findIndex((p) => p.slug === produit.slug);
+          if (i >= 0) liste.splice(i, 1); else liste.push(produit);
+          ecrire(liste);
+          return i < 0; // true si ajouté
+        },
+        retirer(slug) { ecrire(lire().filter((p) => p.slug !== slug)); },
+        vider() { ecrire([]); },
+      };
+
+      const peindre = () => {
+        const liste = lire();
+        const n = liste.length;
+
+        document.querySelectorAll('[data-compteur]').forEach((el) => {
+          el.textContent = n ? String(n) : '';
+          el.toggleAttribute('hidden', n === 0);
+        });
+
+        document.querySelectorAll('[data-ajout]').forEach((b) => {
+          const dedans = liste.some((p) => p.slug === b.dataset.ajout);
+          b.classList.toggle('est-dedans', dedans);
+          b.setAttribute('aria-pressed', String(dedans));
+          const t = b.querySelector('[data-ajout-texte]');
+          if (t) t.textContent = dedans ? 'Retiré du devis' : 'Ajouter au devis';
+        });
+      };
+
+      document.addEventListener('selection:maj', peindre);
+      document.addEventListener('DOMContentLoaded', peindre);
+      peindre();
+
+      document.addEventListener('click', (e) => {
+        const b = e.target.closest('[data-ajout]');
+        if (!b) return;
+        e.preventDefault();
+        window.Selection.basculer({
+          slug: b.dataset.ajout,
+          nom: b.dataset.nom,
+          categorie: b.dataset.categorie || '',
+        });
+      });
+    })();
+
+    /* ---------- Apparition au défilement ---------- */
+    (() => {
+      const cibles = () => document.querySelectorAll('.reveal:not(.vu)');
+      if (!('IntersectionObserver' in window)) {
+        document.addEventListener('DOMContentLoaded', () =>
+          cibles().forEach((el) => el.classList.add('vu')));
+        return;
+      }
+      const io = new IntersectionObserver((entrees) => {
+        entrees.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.transitionDelay = (e.target.dataset.delai || '0') + 'ms';
+          e.target.classList.add('vu');
+          io.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+
+      document.addEventListener('DOMContentLoaded', () => cibles().forEach((el) => io.observe(el)));
+    })();
+  </script>  </body> </html>  <script>
+  /* Aperçu d'image suivant le curseur sur la liste des catégories. */
+  (() => {
+    const zone = document.querySelector('[data-cats]');
+    const boite = document.querySelector('[data-curseur]');
+    const img = document.querySelector('[data-curseur-img]');
+    const legende = document.querySelector('[data-curseur-legende]');
+    if (!zone || !boite || !img) return;
+    if (window.matchMedia('(hover: none)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let x = 0, y = 0, cx = 0, cy = 0, anime = false;
+
+    const boucle = () => {
+      cx += (x - cx) * 0.14;
+      cy += (y - cy) * 0.14;
+      boite.style.translate = `${cx}px ${cy}px`;
+      if (anime) requestAnimationFrame(boucle);
+    };
+
+    zone.querySelectorAll('[data-apercu]').forEach((lien) => {
+      const src = lien.dataset.apercu;
+      if (!src) return;
+      lien.addEventListener('mouseenter', (e) => {
+        // Placé sous le curseur avant l'apparition, sinon il glisse depuis
+        // sa dernière position à l'écran.
+        x = cx = e.clientX;
+        y = cy = e.clientY;
+        boite.style.translate = `${cx}px ${cy}px`;
+
+        // Le préfixe de déploiement est exposé sur <html data-base>.
+        img.src = `${document.documentElement.dataset.base}img/${src}-400.webp`;
+        if (legende) legende.textContent = lien.dataset.apercuNom || '';
+        boite.classList.add('est-visible');
+        if (!anime) { anime = true; requestAnimationFrame(boucle); }
+      });
+      lien.addEventListener('mouseleave', () => {
+        boite.classList.remove('est-visible');
+        anime = false;
+      });
+    });
+
+    zone.addEventListener('mousemove', (e) => { x = e.clientX; y = e.clientY; });
+  })();
+</script>
